@@ -1,13 +1,7 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const orderId = urlParams.get("orderId");
-
-
-//Afficher l'identifiant de la commande
-function displayResponseId(orderId){
-  const p = document.createElement('span');
-  p.textContent = orderId;
-  document.querySelector('#orderId').appendChild(p);
-
-  
-}
+let url = new URL(window.location.href);
+const orderId = url.searchParams.get("orderId");
+// put the orderId in the DOM
+let spanOrderId = document.getElementById("orderId");
+spanOrderId.innerText = `${orderId}`;
+// clear the local storage
+localStorage.clear();
