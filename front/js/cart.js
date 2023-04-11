@@ -19,7 +19,7 @@ const productsApi = [];
 for (let element of cart) {
   let apiId = element.id;
   // use the api, and find the element with the id in the localstorage
-  fetch("http://localhost:3000/api/products/" + apiId)
+  fetch("https://oceanebrl-kanap.onrender.com/api/products/" + apiId)
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -216,7 +216,7 @@ order.addEventListener("click", (e) => {
     for (element of cart) {
       products.push(element.id);
     }
-    fetch("http://localhost:3000/api/products/order", {
+    fetch("https://oceanebrl-kanap.onrender.com/api/products/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

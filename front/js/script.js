@@ -1,5 +1,5 @@
 // use the api
-fetch("http://localhost:3000/api/products")
+fetch("https://oceanebrl-kanap.onrender.com/api/products")
   .then((res) => {
     // return json if it works
     if (res.ok) {

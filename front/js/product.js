@@ -2,7 +2,7 @@
 let url = new URL(window.location.href);
 const productId = url.searchParams.get("id");
 // use the api
-fetch("http://localhost:3000/api/products/" + productId)
+fetch("https://oceanebrl-kanap.onrender.com/api/products/" + productId)
   .then((res) => {
     if (res.ok) {
       // return json if it works
